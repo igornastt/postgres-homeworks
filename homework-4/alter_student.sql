@@ -2,7 +2,7 @@
 
 CREATE TABLE student
 (
-    student_id serial,
+    student_id serial PRIMARY KEY,
 	first_name varchar,
 	last_name varchar,
 	birthday date,
@@ -34,4 +34,4 @@ VALUES ('John', 'Doe', '1990-01-01', '1234567890'),
 
 -- 7. Удалить все данные из таблицы со сбросом идентификатор в исходное состояние
 
-TRUNCATE TABLE student
+TRUNCATE TABLE student RESTART IDENTITY;
